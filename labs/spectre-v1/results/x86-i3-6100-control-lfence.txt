@@ -1,0 +1,41 @@
+spectre-v1-oneshot: cpu=1 cve=CVE-2017-5753 class=branch-prediction secret_len=17 rounds=16 inner=30 stride=0x1040 hot<150 control=lfence
+host cpu=1 governor=powersave online=0-3 freq_khz=3700001 freq_min_khz=800000 freq_max_khz=3700000 smt=1,3 aslr=2
+timing: cold=120 hot=32 threshold=76
+== leg=control control=lfence ==
+byte idx=0 expect_class=12 got_class=0 hits=0/16 majority=0 ok=0
+recovered idx=0 clsA=0 clsB=0 byte=0xff char=.
+byte idx=1 expect_class=15 got_class=0 hits=0/16 majority=0 ok=0
+recovered idx=1 clsA=0 clsB=0 byte=0xff char=.
+byte idx=2 expect_class=26 got_class=0 hits=0/16 majority=0 ok=0
+recovered idx=2 clsA=0 clsB=0 byte=0xff char=.
+byte idx=3 expect_class=28 got_class=0 hits=0/16 majority=0 ok=0
+recovered idx=3 clsA=0 clsB=0 byte=0xff char=.
+byte idx=4 expect_class=11 got_class=0 hits=0/16 majority=0 ok=0
+recovered idx=4 clsA=0 clsB=0 byte=0xff char=.
+byte idx=5 expect_class=13 got_class=0 hits=0/16 majority=0 ok=0
+recovered idx=5 clsA=0 clsB=0 byte=0xff char=.
+byte idx=6 expect_class=26 got_class=0 hits=0/16 majority=0 ok=0
+recovered idx=6 clsA=0 clsB=0 byte=0xff char=.
+byte idx=7 expect_class=18 got_class=0 hits=0/16 majority=0 ok=0
+recovered idx=7 clsA=0 clsB=0 byte=0xff char=.
+byte idx=8 expect_class=9 got_class=0 hits=0/16 majority=0 ok=0
+recovered idx=8 clsA=0 clsB=0 byte=0xff char=.
+byte idx=9 expect_class=14 got_class=0 hits=0/16 majority=0 ok=0
+recovered idx=9 clsA=0 clsB=0 byte=0xff char=.
+byte idx=10 expect_class=31 got_class=0 hits=0/16 majority=0 ok=0
+recovered idx=10 clsA=0 clsB=0 byte=0xff char=.
+byte idx=11 expect_class=28 got_class=0 hits=0/16 majority=0 ok=0
+recovered idx=11 clsA=0 clsB=0 byte=0xff char=.
+byte idx=12 expect_class=30 got_class=0 hits=0/16 majority=0 ok=0
+recovered idx=12 clsA=0 clsB=0 byte=0xff char=.
+byte idx=13 expect_class=17 got_class=0 hits=0/16 majority=0 ok=0
+recovered idx=13 clsA=0 clsB=0 byte=0xff char=.
+byte idx=14 expect_class=30 got_class=0 hits=0/16 majority=0 ok=0
+recovered idx=14 clsA=0 clsB=0 byte=0xff char=.
+byte idx=15 expect_class=13 got_class=0 hits=0/16 majority=0 ok=0
+recovered idx=15 clsA=0 clsB=0 byte=0xff char=.
+byte idx=16 expect_class=6 got_class=0 hits=0/16 majority=0 ok=0
+recovered idx=16 clsA=0 clsB=0 byte=0xff char=.
+spectre leg=control classes_recovered=0/17 verdict=cold
+recovered leg=control bytes=0/17 string="................."
+verdict: CONTROL_COLD

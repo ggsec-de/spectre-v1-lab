@@ -1,0 +1,21 @@
+# Compiled lab binaries
+labs/spectre-v1/spectre-v1-oneshot
+
+# Object files
+*.o
+
+# Kernel module build products
+*.ko
+*.mod
+*.mod.c
+modules.order
+Module.symvers
+.tmp_versions/
+.*.cmd
+
+# Editor and OS files
+.DS_Store
+Thumbs.db
+*~
+.vscode/
+.idea/
